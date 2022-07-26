@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: "axon-gateway"
+
+axon:
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson
