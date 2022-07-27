@@ -18,7 +18,7 @@ import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 public class AccountsAggregate {
 
     @AggregateIdentifier
-    private String id;
+    private Long id;
     private String name;
     private AccountType type;
     private Double balance;

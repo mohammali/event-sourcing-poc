@@ -2,6 +2,13 @@ spring:
   application:
     name: "reporting"
 
+  jpa:
+    generate-ddl: true
+  datasource:
+    username: "event_sourcing_user"
+    password: "1234567"
+    url: "jdbc:postgresql://localhost:5432/event_sourcing_db"
+
 axon:
   serializer:
     general: jackson

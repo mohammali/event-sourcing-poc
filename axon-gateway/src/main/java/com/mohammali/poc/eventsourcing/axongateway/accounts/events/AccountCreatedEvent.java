@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 public class AccountCreatedEvent {
 
-    String id;
+    Long id;
     String name;
     AccountType type;
     Double balance;

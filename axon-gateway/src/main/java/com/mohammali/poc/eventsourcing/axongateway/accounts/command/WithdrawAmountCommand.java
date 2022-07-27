@@ -7,6 +7,6 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 public class WithdrawAmountCommand {
 
     @TargetAggregateIdentifier
-    String id;
+    Long id;
     Double amount;
 }

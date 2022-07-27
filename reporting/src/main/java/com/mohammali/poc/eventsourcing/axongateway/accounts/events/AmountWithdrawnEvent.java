@@ -5,6 +5,6 @@ import lombok.Value;
 @Value
 public class AmountWithdrawnEvent {
 
-    String id;
+    Long id;
     Double amount;
 }

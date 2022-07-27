@@ -5,6 +5,6 @@ import lombok.Value;
 @Value
 public class WithdrawAmountDto {
 
-    String id;
+    Long id;
     Double amount;
 }

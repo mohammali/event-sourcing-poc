@@ -13,8 +13,18 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>reporting</name>
     <description>reporting</description>
+
+    <repositories>
+        <repository>
+            <id>internal-repository</id>
+            <name>mxninja-nexus</name>
+            <url>https://mohammali.com:8081/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
     <properties>
         <java.version>17</java.version>
+        <snowflake.version>1.0.0</snowflake.version>
     </properties>
     <dependencies>
         <dependency>
@@ -44,6 +54,14 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.9</version>
         </dependency>
+
+        <!-- snowflake -->
+        <dependency>
+            <groupId>com.mxninja</groupId>
+            <artifactId>snowflake</artifactId>
+            <version>${snowflake.version}</version>
+        </dependency>
+        <!-- snowflake -->
     </dependencies>
 
     <build>

@@ -6,11 +6,10 @@ import com.mohammali.poc.eventsourcing.axongateway.accounts.command.WithdrawAmou
 import com.mohammali.poc.eventsourcing.axongateway.accounts.models.CreateAccountDto;
 import com.mohammali.poc.eventsourcing.axongateway.accounts.models.DepositAmountDto;
 import com.mohammali.poc.eventsourcing.axongateway.accounts.models.WithdrawAmountDto;
+import com.mxninja.snowflake.Snowflake;
 import lombok.RequiredArgsConstructor;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
 
 @RequestMapping("accounts")
 @RestController
@@ -18,17 +17,18 @@ import java.util.UUID;
 public class AccountsController {
 
     private final CommandGateway commandGateway;
+    private final Snowflake snowflake;
 
     @PostMapping
     public String createAccount(@RequestBody CreateAccountDto body) {
         return commandGateway.sendAndWait(
             new CreateAccountCommand(
-                UUID.randomUUID().toString(),
+                snowflake.nextId(),
                 body.name(),
                 body.type(),
                 0.0
             )
-        );
+        ).toString();
     }
 
     @PatchMapping("{id}/deposit")

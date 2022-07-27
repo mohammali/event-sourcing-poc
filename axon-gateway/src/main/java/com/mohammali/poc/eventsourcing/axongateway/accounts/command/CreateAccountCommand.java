@@ -9,7 +9,7 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 public class CreateAccountCommand {
 
     @TargetAggregateIdentifier
-    String id;
+    Long id;
     String name;
     AccountType type;
     Double balance;

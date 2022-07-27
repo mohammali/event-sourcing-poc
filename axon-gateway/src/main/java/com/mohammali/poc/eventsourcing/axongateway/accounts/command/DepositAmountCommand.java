@@ -7,6 +7,6 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 public class DepositAmountCommand {
 
     @TargetAggregateIdentifier
-    String id;
+    Long id;
     Double amount;
 }

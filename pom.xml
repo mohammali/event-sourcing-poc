@@ -9,5 +9,6 @@
 
     <modules>
         <module>axon-gateway</module>
+        <module>reporting</module>
     </modules>
 </project>
