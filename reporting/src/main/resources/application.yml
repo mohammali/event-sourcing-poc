@@ -2,12 +2,16 @@ spring:
   application:
     name: "reporting"
 
-  jpa:
-    generate-ddl: true
-  datasource:
-    username: "event_sourcing_user"
-    password: "1234567"
-    url: "jdbc:postgresql://localhost:5432/event_sourcing_db"
+#  jpa:
+#    show-sql: false
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    username: "event_sourcing_user"
+#    password: "1234567"
+#    url: "jdbc:postgresql://localhost:5432/event_sourcing_db"
 
 axon:
   serializer:
